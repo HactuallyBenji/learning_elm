@@ -75,7 +75,9 @@ viewInput t p v toMsg =
 viewValidation : Model -> Html msg
 viewValidation model =
     if String.length model.password < 8 then
-        div [ style "color" "green" ] [ text "Password must be at least 8 characters" ]
+        div [ style "color" "red" ] [ text "Password must be at least 8 characters" ]
+    else if (String.any Char.isDigit model.password) == False then
+        div [ style "color" "red" ] [ text "Password must include at least one number" ]
     else if model.password == model.passwordAgain then
         div [ style "color" "green" ] [ text "OK" ]
     else
