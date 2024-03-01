@@ -28,4 +28,5 @@ view model =
     , button [ onClick Increment ] [ text "+" ]
     , div [] [ text " " ]
     , button [ onClick Reset ] [ text "Reset" ]
+    , div [] [ text "Test" ]
     ]

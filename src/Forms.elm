@@ -64,6 +64,7 @@ view model =
     , viewInput "password" "Password" model.password Password
     , viewInput "password" "Re-enter Password" model.passwordAgain PasswordAgain
     , viewValidation model
+    , div [ style "color" "blue" ] [ text "test" ]
     ]
 
 
